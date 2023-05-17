@@ -6,8 +6,6 @@ import useAuth from "../hooks/useAuth";
 // import { autenticarUsuario } from "../context/AuthProvider";
 import AuthContext from "../context/AuthProvider";
 
-
-
 const Header = () => {
   const navigate = useNavigate();
   const { auth, setAuth, cargando, cerrarSesion } = useAuth();
@@ -63,7 +61,7 @@ const Header = () => {
   // const bRegistrado = true;
   return (
     <>
-      <header className=" w-full  lg:fixed ">
+      <header className=" w-full   ">
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-principal">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
             <Link to="/" className="flex items-center">
@@ -135,28 +133,141 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a
+                  {/* <a
                     href="#"
                     className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Libros
-                  </a>
+                  </a> */}
+
+                  <div className="mx-auto flex  items-center justify-center ">
+                    <div className="group relative cursor-pointer ">
+                      <div className="flex items-center justify-between space-x-5 bg-white px-4">
+                        <a className="menu-hover   block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                          Libros
+                        </a>
+                      </div>
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2">
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Belico
+                        </a>
+
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Ciencia Ficcion"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Ciencia Ficcion
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Drama
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Erótico
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Fantasia"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Fantasía
+                        </a>
+
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Misterio
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Romance
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Suspenso
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Terror
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Comics
-                  </a>
+                  <div className="mx-auto flex  items-center justify-center ">
+                    <div className="group relative cursor-pointer ">
+                      <div className="flex items-center justify-between space-x-5 bg-white px-4">
+                        <a className="menu-hover   block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                          Comics
+                        </a>
+                      </div>
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2">
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Belico
+                        </a>
+
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Ciencia Ficción
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Drama
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Erótico
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Fantasía
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Misterio
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Romance
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Suspenso
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Terror
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Mangas
-                  </a>
+                  <div className="   items-start justify-start ">
+                    <div className="group relative cursor-pointer ">
+                      <div className="flex items-center justify-between space-x-5 bg-white px-4">
+                        <a className="menu-hover   block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                          Mangas
+                        </a>
+                      </div>
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2">
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Belico
+                        </a>
+
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Ciencia Ficción
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Drama
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Erótico
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Fantasía
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Misterio
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Romance
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Suspenso
+                        </a>
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Terror
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>

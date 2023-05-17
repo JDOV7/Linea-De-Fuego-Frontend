@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {},
     colors: {
+      transparent: 'transparent',
       principal: "#7A3E65",
       secundario: "#A84448",
       terciario: "#F7EFE5",

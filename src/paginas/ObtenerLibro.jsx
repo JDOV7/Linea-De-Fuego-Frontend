@@ -27,7 +27,7 @@ const ObtenerLibro = () => {
   useEffect(() => {
     obtenerLibro(l_id_libro);
   }, []);
-
+  console.log(libro);
   const { msg } = alerta;
   return (
     <>
@@ -77,8 +77,8 @@ const ObtenerLibro = () => {
                   </Link>
                 </div>
               </div>
-              <div className="hidden lg:mt-0 lg:col-span-4 lg:flex ">
-                <img src={libroFondo} alt="hero image" />
+              <div className=" lg:mt-0 lg:col-span-4 lg:flex flex items-center justify-center">
+                <img src={libro.l_portada} alt="hero image" />
               </div>
             </div>
           </section>
@@ -88,7 +88,7 @@ const ObtenerLibro = () => {
               {resenias && resenias.length ? (
                 <>
                   {resenias.map((resenia, index) => {
-                    if (index < 4) {
+                    if (index < 50) {
                       return (
                         <Resenia
                           key={resenia.r_id_resena}

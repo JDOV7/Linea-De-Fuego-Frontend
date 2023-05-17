@@ -122,7 +122,7 @@ const CrearCliente = () => {
                   Correo
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   className="border w-full p-3 mt-4 bg-cuarto rounded-xl"
                   placeholder="Correo de Registro"
                   name="correo"

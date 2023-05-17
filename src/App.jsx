@@ -14,6 +14,7 @@ import ObtenerLibro from "./paginas/ObtenerLibro";
 import RutaSemiProtegida from "./layout/RutaSemiProtegida";
 import { LibrosProvider } from "./context/LibrosProvider";
 import CrearResenia from "./paginas/CrearResenia";
+import ObtenerLibros from "./paginas/ObtenerLibros";
 function App() {
   return (
     <BrowserRouter>
@@ -40,6 +41,7 @@ function App() {
                 path="linea-de-fuego/libros"
                 element={<Libros></Libros>}
               ></Route>
+
               {/* <Route
               path="linea-de-fuegos/obtener-libro/:l_id_libro"
               element={<ObtenerLibro></ObtenerLibro>}
@@ -76,6 +78,10 @@ function App() {
               <Route
                 path="obtener-libro/:l_id_libro"
                 element={<ObtenerLibro></ObtenerLibro>}
+              ></Route>
+              <Route
+                path="obtener-libros/:l_tipo/:l_genero"
+                element={<ObtenerLibros></ObtenerLibros>}
               ></Route>
             </Route>
           </Routes>
