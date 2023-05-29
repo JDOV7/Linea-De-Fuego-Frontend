@@ -5,7 +5,6 @@ import useAuth from "../hooks/useAuth";
 import Alerta from "../components/Alerta";
 import clienteAxios from "../config/axios";
 
-import libro from "../assets/libro-de-lectura.png";
 const Login = () => {
   const { auth, setAuth } = useAuth();
   // console.log(auth);
@@ -64,7 +63,12 @@ const Login = () => {
               <span className="text-secundario font-black"> Comprar!</span>
             </h1>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex  items-center justify-center">
-              <img src={libro} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/libro-de-lectura.png"
+                }
+                alt="hero image"
+              />
             </div>
           </div>
           <div className="mt-10 md:mt-5 shadow-2xl px-10 py-10 rounded-3xl bg-terciario ">

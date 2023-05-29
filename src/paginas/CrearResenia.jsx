@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import useLibro from "../hooks/useLibro";
 import useAuth from "../hooks/useAuth";
 import Alerta from "../components/Alerta";
-import libroFondo from "../assets/libroFondo.png";
 const CrearResenia = () => {
   const params = useParams();
   const { r_id_libro } = params;

@@ -3,13 +3,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import pa from '../assets/blob-scene-haikei.svg'
 // import blobScene from "../assets/blob-scene-haikei.svg";
-import libroFondo from "../assets/libroFondo.png";
-import spiderman from "../assets/spiderman.png";
-import batman from "../assets/batman.png";
-import dragonBall from "../assets/icons8-dragon-ball-64.png";
-import saitama from "../assets/icons8-saitama-64.png";
-import harryP from "../assets/harry-potter.png";
-import frankenstein from "../assets/frankenstein.png";
 
 const PaginaPrincipal = () => {
   return (
@@ -64,6 +57,13 @@ const PaginaPrincipal = () => {
                   </a>
                 </li>
                 <li>
+                  {/* <a
+                    href="#"
+                    className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Libros
+                  </a> */}
+
                   <div className="mx-auto flex  items-center justify-center ">
                     <div className="group relative cursor-pointer ">
                       <div className="flex items-center justify-between space-x-5 bg-white px-4">
@@ -71,8 +71,11 @@ const PaginaPrincipal = () => {
                           Libros
                         </a>
                       </div>
-                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2">
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2 z-50">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Belico"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Belico
                         </a>
 
@@ -80,13 +83,19 @@ const PaginaPrincipal = () => {
                           href="/linea-de-fuego/obtener-libros/Libro/Ciencia Ficcion"
                           className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
                         >
-                          Ciencia Ficcion
+                          Ciencia Ficción
                         </a>
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Drama"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Drama
                         </a>
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
-                          Erótico
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Erotico"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Erotico
                         </a>
                         <a
                           href="/linea-de-fuego/obtener-libros/Libro/Fantasia"
@@ -95,16 +104,28 @@ const PaginaPrincipal = () => {
                           Fantasía
                         </a>
 
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Misterio"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Misterio
                         </a>
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Romance"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Romance
                         </a>
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Suspenso"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Suspenso
                         </a>
-                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Libro/Terror"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
                           Terror
                         </a>
                       </div>
@@ -112,20 +133,134 @@ const PaginaPrincipal = () => {
                   </div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Comics
-                  </a>
+                  <div className="mx-auto flex  items-center justify-center ">
+                    <div className="group relative cursor-pointer ">
+                      <div className="flex items-center justify-between space-x-5 bg-white px-4">
+                        <a className="menu-hover   block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                          Comics
+                        </a>
+                      </div>
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2 z-50">
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Belico
+                        </a>
+
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Ciencia Ficcion"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Ciencia Ficción
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Drama"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Drama
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Erotico"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Erótico
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Fantasia"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Fantasía
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Misterio"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Misterio
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Romance"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Romance
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Suspenso"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Suspenso
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Comic/Terror"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Terror
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Mangas
-                  </a>
+                  <div className="mx-auto flex  items-center justify-center ">
+                    <div className="group relative cursor-pointer ">
+                      <div className="flex items-center justify-between space-x-5 bg-white px-4">
+                        <a className="menu-hover   block py-2 pl-3 pr-4 text-cuarto border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                          Mangas
+                        </a>
+                      </div>
+                      <div className="invisible absolute bg-terciario flex py-3 rounded-2xl px-4 shadow-xl group-hover:visible left-1/2 transform -translate-x-1/2 z-50">
+                        <a className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2">
+                          Belico
+                        </a>
+
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Ciencia Ficcion"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Ciencia Ficción
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Drama"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Drama
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Erotico"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Erótico
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Fantasia"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Fantasía
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Misterio"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Misterio
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Romance"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Romance
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Suspenso"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Suspenso
+                        </a>
+                        <a
+                          href="/linea-de-fuego/obtener-libros/Manga/Terror"
+                          className="my-2 block py-1 border-b-2 font-semibold hover:text-principal hover:border-principal hover:text-lg hover:font-extrabold md:mx-2"
+                        >
+                          Terror
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -185,7 +320,12 @@ const PaginaPrincipal = () => {
             </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src={libroFondo} alt="hero image" />
+            <img
+              src={
+                "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/libroFondo.png"
+              }
+              alt="hero image"
+            />
           </div>
         </div>
       </section>
@@ -194,23 +334,53 @@ const PaginaPrincipal = () => {
         <div className="max-w-screen-xl px-4 pb-2 mx-auto ">
           <div className="grid grid-cols-2 gap-8  sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 ">
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={spiderman} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/spiderman.png"
+                }
+                alt="hero image"
+              />
             </a>
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={batman} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/batman.png"
+                }
+                alt="hero image"
+              />
             </a>
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={dragonBall} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/icons8-dragon-ball-64.png"
+                }
+                alt="hero image"
+              />
             </a>
 
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={saitama} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/icons8-saitama-64.png"
+                }
+                alt="hero image"
+              />
             </a>
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={harryP} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/harry-potter.png"
+                }
+                alt="hero image"
+              />
             </a>
             <a href="#" className="flex items-center lg:justify-center">
-              <img src={frankenstein} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/frankenstein.png"
+                }
+                alt="hero image"
+              />
             </a>
           </div>
         </div>

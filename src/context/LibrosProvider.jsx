@@ -15,11 +15,11 @@ const LibrosProvider = ({ children }) => {
     // console.log(paciente);
     // const token = localStorage.getItem("token");
     try {
-      console.log("14");
+      // console.log("14");
       const url = `/libros/obtener-libro/${l_id_libro}`;
-      console.log("16");
+      // console.log("16");
       const { data } = await clienteAxios.get(url);
-      console.log("18");
+      // console.log("18");
 
       if (!data.body) {
         throw new Error("Error");

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import libro from "../assets/cuento-de-hadas.png";
 import clienteAxios from "../config/axios";
 import Alerta from "../components/Alerta";
 import validarCorreo from "../helpers/validarCorreo";
@@ -93,7 +92,12 @@ const CrearCliente = () => {
               <span className="text-secundario font-black"> Comprar!</span>
             </h1>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex  items-center justify-center">
-              <img src={libro} alt="hero image" />
+              <img
+                src={
+                  "https://mi-bucket-jdov7-prueba.s3.us-east-2.amazonaws.com/utilidades/cuento-de-hadas.png"
+                }
+                alt="hero image"
+              />
             </div>
           </div>
           <div className="mt-10 md:mt-5 shadow-2xl px-10 py-10 rounded-3xl bg-terciario ">

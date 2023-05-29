@@ -1,10 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import useCarrito from "../hooks/useCarrito";
+import useAuth from "../hooks/useAuth";
 const CardLibro = ({ datos }) => {
-  const { l_id_libro, l_nombre, l_precio, l_portada } = datos;
-  console.log(datos);
+  const { l_id_libro, l_nombre, l_precio, l_portada, l_cantidad, l_autor } =
+    datos;
+  const { auth, actualizarPerfil } = useAuth();
+  const { carrito, setCarrito, agregarAlCarrito, eliminarProductoCarrito } =
+    useCarrito();
+  const [cantidad, setCantidad] = useState(1);
+  // console.log(datos);
+  useEffect(() => {
+    // console.log("nuevo producto");
+  }, [carrito]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (cantidad < 0 || cantidad > l_cantidad) {
+      setCantidad(0);
+      return;
+    }
+    if (cantidad == 0 || cantidad === "") {
+      eliminarProductoCarrito(l_id_libro);
+      return;
+    }
+
+    console.log(datos);
+    console.log(`cantidad comprada:${cantidad}#`);
+    const datosCarrito = {
+      l_id_libro,
+      l_nombre,
+      l_autor,
+      l_precio,
+      l_cantidad: cantidad,
+    };
+    agregarAlCarrito(datosCarrito);
+  };
   return (
-    <div className=" col-span-3 pb-7 flex items-center justify-center">
+    <div className=" col-span-4 pb-7 flex items-center justify-center">
       <div className="bg-terciario p-4 rounded-2xl shadow-2xl">
         <div className="flex items-center justify-center">
           <img src={l_portada} className="items-center justify-center" />
@@ -18,10 +52,12 @@ const CardLibro = ({ datos }) => {
           </div>
         </div>
         <div className="p-3">
-          <p className="text-xl font-extrabold text-principal text-center">
-            Titulo:{" "}
-            <span className="text-lg font-medium text-black">{l_nombre}</span>
-          </p>
+          <div className="flex items-center justify-center text-center">
+            <p className="text-xl font-extrabold text-principal text-center">
+              Titulo:{" "}
+              <span className="text-lg font-medium text-black">{l_nombre}</span>
+            </p>
+          </div>
           <p className="text-xl font-extrabold text-principal">
             Precio:{" "}
             <span className="text-lg font-medium text-black">{l_precio}</span>
@@ -38,12 +74,24 @@ const CardLibro = ({ datos }) => {
                 id={`cantidad${l_id_libro}`}
                 className="text-lg font-medium text-black text-center rounded-xl w-14"
                 min={"1"}
+                max={l_cantidad}
                 defaultValue={1}
+                onChange={(e) => {
+                  if (e.target.value < 0 || e.target.value > l_cantidad) {
+                    e.target.value = 1;
+                    return;
+                  }
+
+                  setCantidad(e.target.value);
+                }}
               />
             </label>
           </div>
           <div className="pt-4 text-center">
-            <button className="bg-secundario hover:bg-principal rounded-2xl py-2 px-4 font-extrabold">
+            <button
+              className="bg-secundario hover:bg-principal rounded-2xl py-2 px-4 font-extrabold"
+              onClick={handleSubmit}
+            >
               Agregar
             </button>
           </div>
